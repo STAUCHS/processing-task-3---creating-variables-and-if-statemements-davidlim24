@@ -8,7 +8,7 @@ public class Sketch extends PApplet {
    */
   public void settings() {
 	// put your size call here
-    size(400, 400);
+    size(900, 900);
   }
 
   /** 
@@ -16,21 +16,53 @@ public class Sketch extends PApplet {
    * values here i.e background, stroke, fill etc.
    */
   public void setup() {
-    background(210, 255, 173);
-  }
+   
+    // background
+    
+    background(135, 206, 235);
+   
+    // draw ellipse random location
+   
+    fill (255, 255, 0);
+    float ellipseX = random(0,600);
+    float ellipseY = random(0, 600);
+    float ellipseWidth = random(120, 120);
+    float ellipseHeight = random(120, 120);
+    ellipse(ellipseX, ellipseY, ellipseWidth, ellipseHeight);}
 
-  /**
-   * Called repeatedly, anything drawn to the screen goes here
-   */
+   
   public void draw() {
+      // define time variables
+   
+      int hr = hour();
+      int min = minute();
+  
+      // print time on screen 
+     
+      fill(0);
+      textSize(100);
+      text(hr, 130, 150);
+      text(min, 130, 225);
 	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
-
-    stroke(255);
-    line(50, 125, 70, 50);  
+    
+       // create the grass
+       fill(0, 128, 0);
+       rect(0, 600, 895, 775); 
+       
+       fill(196, 164, 132);
+       rect(400,350,360,360);
+    
+       fill(165, 42, 42);
+       triangle(400, 350, 580, 150, 760, 350);
+    
+       rect(540, 550, 80, 160);
+      
+    
+	
+   
   }
   
   // define other methods down here.
+
+  
 }
